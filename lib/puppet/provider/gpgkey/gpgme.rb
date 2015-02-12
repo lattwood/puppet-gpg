@@ -1,5 +1,5 @@
 Puppet::Type.type(:gpgkey).provide(:gpgme) do
-  confine :feature => :gpgme
+  confine :feature => :GPGME
   def exists?
     ! GPGME::Key.find(:secret, keyname()).empty?
   end
